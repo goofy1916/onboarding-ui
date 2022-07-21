@@ -52,8 +52,8 @@ const WorkplaceInfo = ({
           <span className='text-sm text-textsecondary'>(optional)</span>
         </label>
 
-        <div className='flex gap-2  border-[2px] border-gray-300 rounded-md  w-full'>
-          <span className='bg-[#F4F6F9] text-sm font-semibold text-[#BDC5C6] rounded-l-md flex items-center justify-center px-2'>
+        <div className='flex border-[2px] border-gray-300 rounded-md  w-full'>
+          <span className='bg-[#F4F6F9] text-sm font-semibold placeholder:text-[#BDC5C6] rounded-l-md flex items-center justify-center px-2'>
             www.eden.com/
           </span>
           <input
@@ -61,7 +61,7 @@ const WorkplaceInfo = ({
             onChange={(e) => setWorkplaceURL(e.target.value)}
             type='text'
             placeholder='Example'
-            className='text-textsecondary p-2 w-full'
+            className='text-textsecondary pl-4 py-2 pr-2 w-full'
           />
         </div>
         <input
