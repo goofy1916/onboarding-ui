@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const UserNameInfo = ({
+  step,
   fullName,
   setFullName,
   userName,
@@ -16,20 +17,20 @@ const UserNameInfo = ({
     } else if (userName.length < 3) {
       setErrors({ userName: 'User name must be at least 3 characters' });
     } else {
-      setCurrentStep(2);
+      setCurrentStep(step+1);
     }
   };
 
   return (
     <div>
-      <div className='text-secondary text-center font-bold text-4xl'>
+      <div className='text-secondary text-center font-bold text-2xl'>
         Welcome! First things first...
       </div>
       <div className='text-textSubTitle font-medium mt-4 text-sm text-center'>
         You can always change them later.
       </div>
       <form
-        className='flex flex-col mx-auto mt-8 w-3/4 md:w-1/2'
+        className='flex flex-col mx-auto mt-8 w-[55%]'
         onSubmit={handleSubmit}
       >
         <label className='text-base font-semibold text-secondary '>
@@ -61,7 +62,7 @@ const UserNameInfo = ({
         <input
           type='submit'
           className='bg-primary rounded-md mt-6 
-          text-sm font-bold text-white w-full h-[43px]'
+          text-sm font-normal text-white w-full h-[44px]'
           value='Create Workspace'
         />
       </form>

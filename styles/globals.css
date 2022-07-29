@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.progress-bar-half {
+    background: linear-gradient(to right, #5A4AD1 50% , #BDC5C6 50%);
+  }
+.progress-bar-full {
+    background: linear-gradient(to right, #5A4AD1 50% , #5A4AD1 50%);
+  }

@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 
 const WorkplaceInfo = ({
+  step,
   workplaceName,
   setWorkplaceName,
   workplaceURL,
@@ -17,20 +18,20 @@ const WorkplaceInfo = ({
         workplaceName: 'Workplace name must be at least 3 characters',
       });
     } else {
-      setCurrentStep(3);
+      setCurrentStep(step + 1);
     }
   };
 
   return (
     <div>
-      <div className='text-secondary text-center font-bold text-4xl'>
+      <div className='text-secondary text-center font-bold text-2xl'>
         Let&apos;s set up a home for all your work
       </div>
       <div className='text-textSubTitle mt-4 font-medium text-sm text-center'>
         You can always create another workspace later.
       </div>
       <form
-        className='flex flex-col mx-auto mt-8 w-3/4 md:w-1/2'
+        className='flex flex-col mx-auto mt-8 w-[55%]'
         onSubmit={handleSubmit}
       >
         <label className='text-base font-semibold text-[#40434A]'>
@@ -66,7 +67,7 @@ const WorkplaceInfo = ({
         </div>
         <input
           type='submit'
-          className='bg-[#5A4AD1] rounded-md mt-6 text-sm font-bold text-white w-full h-[43px]'
+          className='bg-[#5A4AD1] rounded-md mt-6 text-sm font-normal text-white w-full h-[44px]'
           value='Create Workspace'
         />
       </form>
@@ -75,4 +76,3 @@ const WorkplaceInfo = ({
 };
 
 export default WorkplaceInfo;
-

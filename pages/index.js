@@ -13,10 +13,38 @@ export default function Home() {
   const [workplaceName, setWorkplaceName] = useState('');
   const [workplaceURL, setWorkplaceURL] = useState('');
 
+  var steps = [
+    <UserNameInfo
+      key={0}
+      step={currentStep}
+      userName={userName}
+      setUserName={setUserName}
+      fullName={fullName}
+      setFullName={setFullName}
+      setCurrentStep={setCurrentStep}
+    />,
+    <WorkplaceInfo
+      key={1}
+      step={currentStep}
+      workplaceName={workplaceName}
+      setWorkplaceName={setWorkplaceName}
+      workplaceURL={workplaceURL}
+      setWorkplaceURL={setWorkplaceURL}
+      setCurrentStep={setCurrentStep}
+    />,
+    <UsageType key={2} step={currentStep} setCurrentStep={setCurrentStep} />,
+    <SuccessStep
+      key={3}
+      userName={userName}
+      step={currentStep}
+      setCurrentStep={setCurrentStep}
+    />,
+  ];
+
   return (
     <div className='container mx-auto'>
-      <div className='mx-2 md:w-2/3 md:mx-auto'>
-        <div className='mt-10 relative w-full h-16'>
+      <div className='mx-4 my-10 sm:w-4/5 md:w-3/5 sm:mx-auto'>
+        <div className='my-10 relative w-full h-16'>
           <Image
             layout='fill'
             objectFit='contain'
@@ -24,29 +52,14 @@ export default function Home() {
             src={'/logo.PNG'}
           />
         </div>
-        <ProcessStepper step={currentStep} setCurrentStep={setCurrentStep} />
-        {currentStep == 1 && (
-          <UserNameInfo
-            userName={userName}
-            setUserName={setUserName}
-            fullName={fullName}
-            setFullName={setFullName}
+        <div className='w-1/2 mx-auto'>
+          <ProcessStepper
+            NoOfSteps={steps.length}
+            step={currentStep}
             setCurrentStep={setCurrentStep}
           />
-        )}
-        {currentStep == 2 && (
-          <WorkplaceInfo
-            workplaceName={workplaceName}
-            setWorkplaceName={setWorkplaceName}
-            workplaceURL={workplaceURL}
-            setWorkplaceURL={setWorkplaceURL}
-            setCurrentStep={setCurrentStep}
-          />
-        )}
-        {currentStep == 3 && <UsageType setCurrentStep={setCurrentStep} />}
-        {currentStep == 4 && (
-          <SuccessStep userName={userName} setCurrentStep={setCurrentStep} />
-        )}
+        </div>
+        {steps[currentStep - 1]}
       </div>
     </div>
   );
