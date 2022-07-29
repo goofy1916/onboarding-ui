@@ -14,7 +14,7 @@ const UsageType = ({ step,setCurrentStep }) => {
       <div className='text-textSubTitle font-medium mt-4 text-sm text-center'>
         We&apos;ll streamline your setup experience accordingly.
       </div>
-      <div className='flex mt-4 gap-6 mx-4 w-[55%] md:mx-auto'>
+      <div className='flex mt-4 gap-6 mx-4 md:w-[55%] md:mx-auto'>
         <div onClick={()=>setUsageType("Personal")} className={'cursor-pointer p-4 border-[2px] rounded-md ' + (usageType=="Personal"?"border-primary" : "border-textsecondary")} >
           <RiUser3Fill size={"20px"} className={(usageType=="Personal"?"text-primary" : "text-secondary")}/>
           <div className='mt-4 text-sm font-bold text-secondary'>
@@ -36,7 +36,7 @@ const UsageType = ({ step,setCurrentStep }) => {
       </div>
       <div
         className='bg-primary rounded-md mt-6 
-          text-sm font-bold text-white mx-auto w-[55%] h-[44px]'
+          text-sm font-bold text-white md:mx-auto mx-4 md:w-[55%] h-[44px]'
       >
         <button
           onClick={() => setCurrentStep(step+1)}

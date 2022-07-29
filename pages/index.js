@@ -15,7 +15,7 @@ export default function Home() {
 
   var steps = [
     <UserNameInfo
-      key={0}
+      key={'UserNameInfo'}
       step={currentStep}
       userName={userName}
       setUserName={setUserName}
@@ -24,7 +24,7 @@ export default function Home() {
       setCurrentStep={setCurrentStep}
     />,
     <WorkplaceInfo
-      key={1}
+      key={'WorkPlaceInfo'}
       step={currentStep}
       workplaceName={workplaceName}
       setWorkplaceName={setWorkplaceName}
@@ -32,9 +32,13 @@ export default function Home() {
       setWorkplaceURL={setWorkplaceURL}
       setCurrentStep={setCurrentStep}
     />,
-    <UsageType key={2} step={currentStep} setCurrentStep={setCurrentStep} />,
+    <UsageType
+      key={'UsageType'}
+      step={currentStep}
+      setCurrentStep={setCurrentStep}
+    />,
     <SuccessStep
-      key={3}
+      key={'SuccessStep'}
       userName={userName}
       step={currentStep}
       setCurrentStep={setCurrentStep}
@@ -52,7 +56,7 @@ export default function Home() {
             src={'/logo.PNG'}
           />
         </div>
-        <div className='w-1/2 mx-auto'>
+        <div className='w-2/3 md:w-1/2 mx-auto'>
           <ProcessStepper
             NoOfSteps={steps.length}
             step={currentStep}

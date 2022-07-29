@@ -30,7 +30,7 @@ const UserNameInfo = ({
         You can always change them later.
       </div>
       <form
-        className='flex flex-col mx-auto mt-8 w-[55%]'
+        className='flex flex-col mx-4 md:mx-auto mt-8 md:w-[55%]'
         onSubmit={handleSubmit}
       >
         <label className='text-base font-semibold text-secondary '>

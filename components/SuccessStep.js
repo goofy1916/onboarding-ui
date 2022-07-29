@@ -16,7 +16,7 @@ const SuccessStep = ({ userName, step, setCurrentStep }) => {
       </div>
       <div
         className='bg-primary rounded-md mt-6 
-          text-sm font-bold text-white w-[55%] mx-auto h-[44px]'
+          text-sm font-bold text-white mx-4 md:w-[55%] md:mx-auto h-[44px]'
       >
         <button
           onClick={() => alert("Congrats")}
