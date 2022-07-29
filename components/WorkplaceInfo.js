@@ -24,17 +24,17 @@ const WorkplaceInfo = ({
 
   return (
     <div>
-      <div className='text-secondary text-center font-bold text-2xl'>
+      <div className='text-secondary text-center font-bold text-3xl'>
         Let&apos;s set up a home for all your work
       </div>
-      <div className='text-textSubTitle mt-4 font-medium text-sm text-center'>
+      <div className='text-textSubTitle mt-2 font-medium text-sm text-center'>
         You can always create another workspace later.
       </div>
       <form
-        className='flex flex-col mx-4 md:mx-auto mt-8 md:w-[55%]'
+        className='flex flex-col mx-6 md:mx-auto mt-8 md:w-1/2'
         onSubmit={handleSubmit}
       >
-        <label className='text-base font-semibold text-[#40434A]'>
+        <label className='text-sm font-semibold text-[#40434A]'>
           Workspace Name
         </label>
         <input
@@ -48,9 +48,9 @@ const WorkplaceInfo = ({
           <div className='text-red-500 text-sm'>{errors.workplaceName}</div>
         )}
 
-        <label className='mt-4 text-base font-semibold text-[#40434A]'>
+        <label className='mt-4 text-sm font-semibold text-[#40434A]'>
           Workspace URL{' '}
-          <span className='text-sm text-textsecondary'>(optional)</span>
+          <span className='text-xs text-textsecondary'>(optional)</span>
         </label>
 
         <div className='flex border-[2px] border-gray-300 rounded-md  w-full'>

@@ -23,17 +23,17 @@ const UserNameInfo = ({
 
   return (
     <div>
-      <div className='text-secondary text-center font-bold text-2xl'>
+      <div className='text-secondary text-center font-bold text-3xl'>
         Welcome! First things first...
       </div>
-      <div className='text-textSubTitle font-medium mt-4 text-sm text-center'>
+      <div className='text-textSubTitle font-medium mt-2 text-sm text-center'>
         You can always change them later.
       </div>
       <form
-        className='flex flex-col mx-4 md:mx-auto mt-8 md:w-[55%]'
+        className='flex flex-col mx-6 md:mx-auto mt-8 md:w-1/2'
         onSubmit={handleSubmit}
       >
-        <label className='text-base font-semibold text-secondary '>
+        <label className='text-sm font-semibold text-secondary '>
           Full Name
         </label>
         <input
@@ -46,7 +46,7 @@ const UserNameInfo = ({
         {errors && errors.fullName && (
           <div className='text-red-500 text-sm'>{errors.fullName}</div>
         )}
-        <label className='mt-4 text-base font-semibold text-secondary'>
+        <label className='mt-4 text-sm font-semibold text-secondary'>
           Display Name
         </label>
         <input
@@ -54,7 +54,7 @@ const UserNameInfo = ({
           onChange={(e) => setUserName(e.target.value)}
           type='text'
           placeholder='Steve'
-          className='border-[2px]  placeholder:text-textsecondary border-gray-300 rounded-md p-2 w-full'
+          className='border-[2px] placeholder:text-textsecondary border-gray-300 rounded-md p-2 w-full'
         />
         {errors && errors.userName && (
           <div className='text-red-500 text-sm'>{errors.userName}</div>
@@ -62,7 +62,7 @@ const UserNameInfo = ({
         <input
           type='submit'
           className='bg-primary rounded-md mt-6 
-          text-sm font-normal text-white w-full h-[44px]'
+          text-sm font-normal text-white w-full h-10'
           value='Create Workspace'
         />
       </form>

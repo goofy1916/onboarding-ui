@@ -8,19 +8,19 @@ const UsageType = ({ step,setCurrentStep }) => {
 
   return (
     <div>
-      <div className='text-secondary text-center font-bold text-2xl'>
+      <div className='text-secondary text-center font-bold text-3xl'>
         How are you planning to use Eden?
       </div>
-      <div className='text-textSubTitle font-medium mt-4 text-sm text-center'>
+      <div className='text-textSubTitle font-medium mt-2 text-sm text-center'>
         We&apos;ll streamline your setup experience accordingly.
       </div>
-      <div className='flex mt-4 gap-6 mx-4 md:w-[55%] md:mx-auto'>
+      <div className='flex mt-8 gap-6 mx-4 md:w-1/2 md:mx-auto'>
         <div onClick={()=>setUsageType("Personal")} className={'cursor-pointer p-4 border-[2px] rounded-md ' + (usageType=="Personal"?"border-primary" : "border-textsecondary")} >
           <RiUser3Fill size={"20px"} className={(usageType=="Personal"?"text-primary" : "text-secondary")}/>
           <div className='mt-4 text-sm font-bold text-secondary'>
             For Myself
           </div>
-          <div className='mt-2 text-sm font-medium text-textsecondary'>
+          <div className='mt-2 text-sm font-medium text-[#9ba0ab]'>
             Write better. Think more clearly. Stay organized
           </div>
         </div>
@@ -29,14 +29,14 @@ const UsageType = ({ step,setCurrentStep }) => {
           <div className='mt-4 text-sm font-bold text-secondary'>
             With my team
           </div>
-          <div className='mt-2 text-sm font-medium text-textsecondary'>
+          <div className='mt-2 text-sm font-medium text-[#9ba0ab]'>
             Wikis, docs, tasks & projects, all in one place.
           </div>
         </div>
       </div>
       <div
         className='bg-primary rounded-md mt-6 
-          text-sm font-bold text-white md:mx-auto mx-4 md:w-[55%] h-[44px]'
+          text-sm font-bold text-white md:mx-auto mx-4 md:w-1/2 h-[44px]'
       >
         <button
           onClick={() => setCurrentStep(step+1)}
