@@ -30,7 +30,7 @@ const WorkplaceInfo = ({
         You can always create another workspace later.
       </div>
       <form
-        className='flex flex-col mx-auto mt-8 w-3/4'
+        className='flex flex-col mx-auto mt-8 w-3/4 md:w-1/2'
         onSubmit={handleSubmit}
       >
         <label className='text-base font-semibold text-[#40434A]'>
