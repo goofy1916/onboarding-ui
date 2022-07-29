@@ -46,9 +46,9 @@ export default function Home() {
   ];
 
   return (
-    <div className='container mx-auto'>
-      <div className='flex flex-col justify-center mx-4 sm:w-4/5 md:w-3/5 sm:mx-auto'>
-        <div className='mt-10 mb-5 relative w-full h-12'>
+    <div className='container h-screen mx-auto'>
+      <div className='flex flex-col h-full justify-center mx-4 sm:w-4/5 md:w-3/5 sm:mx-auto'>
+        <div className='mb-5 relative w-full h-12'>
           <Image
             layout='fill'
             objectFit='contain'

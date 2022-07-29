@@ -3,7 +3,7 @@ import { RiCheckFill } from 'react-icons/ri';
 
 const SuccessStep = ({ userName, step, setCurrentStep }) => {
   return (
-    <div className='mt-8'>
+    <div className='mt-4'>
       <div className='w-14 h-14 mx-auto rounded-full flex items-center justify-center bg-primary'>
         <RiCheckFill size={20} className='text-white' />
       </div>
